@@ -1,0 +1,93 @@
+:root {
+    --cokor-body: #868e96;
+    --color-heading: #343a40;
+    --color-number: #ced4da;
+    --primary-color: #087f5b;;
+
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Typography */
+html {
+    font-size: 62.5%;
+}
+
+body {
+    color: var(--cokor-body);
+    font-family: "Inter", sans-serif;
+    font-size: 1.8rem;
+    line-height: 1.5;
+}
+
+h3 {
+    color: var(--color-heading);
+    font-size: 2.4rem;
+    font-weight: 500;
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+.accordion {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin: 100px auto;
+    width: 700px;
+}
+
+.container {
+    align-items: center;
+    box-shadow: 0 0 20px #ccc;
+    column-gap: 24px;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    padding: 2.4rem;
+    row-gap: 32px;
+    width: 100%;
+}
+
+.container--open {
+    border-top: 4px solid var(--primary-color);
+}
+
+.header__text {
+    font-size: 2.4rem;
+    font-weight: 500;
+}
+
+.highlight {
+    color: var(--color-number);
+}
+
+.green-highlight {
+    color: var(--primary-color);
+}
+
+.icon {
+    color: var(--primary-color);
+    width: 24px;
+}
+
+.hidden-box {
+    grid-column: 2;
+}
+
+.hidden-box > p {
+    color: var(--color-heading);
+    font-weight: 400;
+    font-size: 1.6rem;
+}
+
+.hidden-box > ul {
+    font-weight: 400;
+    font-size: 1.6rem;
+}
