@@ -1,0 +1,87 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    color: #343a40;
+    font-size: 2.4rem;
+    display: grid;
+    grid-template-columns: 80px 400px 1fr 250px;
+    grid-template-rows: 80px 11fr;
+    height: 100vh;
+    text-align: center;
+    font-weight: bold;
+}
+
+nav, section, main, aside {
+    padding-top: 2.4rem;
+}
+nav {
+    background-color: #343a40;
+    color: #fff;
+    grid-row: 1 / -1;
+}
+
+menu {
+    background-color: #7048e8;
+    color: #fff;
+    grid-column: 2 / -1;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    justify-content: space-between;
+    padding: 0 4rem;
+}
+
+section {
+    background-color: #e9ecef;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 36px;
+    overflow: scroll;
+}
+
+aside {
+    background-color: #e9ecef;
+}
+
+button {
+    font-size: 1.6rem;
+    font-weight: bold;
+    background-color: #5f3dc4;
+    cursor: pointer;
+    color: #fff;
+    border: 0;
+    padding: 0.8rem 1.2rem;
+}
+
+button:last-child {
+    background-color: #d6336c;
+    margin-left: auto;
+}
+
+button:hover {
+    background-color: #6846cc;
+}
+
+button:last-child:hover {
+    background-color: #dd4077;
+}
+
+.email {
+    width: 70%;
+    height: 96px;
+    background-color: #adb5bd;
+    align-content: center;
+    flex-shrink: 0;
+}
