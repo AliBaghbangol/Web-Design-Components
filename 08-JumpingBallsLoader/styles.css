@@ -1,0 +1,41 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.loader {
+    display: flex;
+    gap: 1rem;
+}
+
+.ball {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: blueviolet;
+
+}
+
+.ball:first-child {
+    animation: jump 1s ease-in-out 0.3s infinite;
+}
+.ball:nth-child(2) {
+    animation: jump 1s ease-in-out 0.6s infinite;
+}
+.ball:last-child {
+    animation: jump 1s ease-in-out 0.9s infinite;
+}
+
+@keyframes jump {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
