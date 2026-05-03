@@ -1,0 +1,43 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    gap: 5px;
+}
+
+.btn {
+    display: inline;
+    text-decoration: none;
+    color: #e91e63;
+    font-size: 1.2rem;
+    border: 2px solid #e91e63;
+    border-radius: 25px;
+    padding: 20px 40px;
+    text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.5s ease;
+}
+
+.btn::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #e91e63;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(-102%);
+    z-index: -1;
+}
+
+.btn:hover {
+    color: #fff;
+}
+
+.btn:hover::before {
+    transform: translateX(0);
+    transition: all 0.5s;
+}
