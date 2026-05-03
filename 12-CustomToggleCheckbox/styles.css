@@ -1,0 +1,56 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: sans-serif;
+}
+
+/* input واقعی مخفی میشه */
+.toggle {
+  position: absolute;
+  opacity: 0;
+}
+
+/* لیبل = کانتینر */
+.toggle-label {
+  display: inline-flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 1.2rem;
+  cursor: pointer;
+  position: relative;
+}
+
+/* پس‌زمینه‌ی سوییچ */
+.toggle-label::before {
+  content: "";
+  width: 4.5rem;
+  height: 2.5rem;
+  background-color: #c6d0cc;
+  border-radius: 1.25rem;
+  transition: background-color 0.2s;
+}
+
+/* دایره */
+.toggle-label::after {
+  content: "";
+  width: 2rem;
+  height: 2rem;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  right: 2.25rem;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.2s;
+}
+
+/* حالت فعال */
+.toggle:checked + .toggle-label::before {
+  background-color: #20b776;
+}
+
+.toggle:checked + .toggle-label::after {
+  transform: translate(2rem, -50%);
+}
